@@ -1,0 +1,35 @@
+#caja{
+    padding:0px;
+}
+#barra{
+    padding:0px;
+    margin:0px;
+    display: flex;
+    flex-direction:row;
+
+}
+.cajitar{
+    display: flex;
+    width:25%;
+    height:5vh;
+    background-color:cyan;
+    list-style:"none";
+    
+}
+.cajitar:hover{
+    background-color:rgba(144, 6, 255,1);
+    color: green;
+}
+a{
+    width:25vw;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration:none;
+    font-size:20px;
+    font-Weight:bold;
+}
+a:hover{
+    color: antiquewhite;
+}
