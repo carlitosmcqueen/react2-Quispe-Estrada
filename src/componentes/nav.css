@@ -1,5 +1,7 @@
 #caja{
     padding:0px;
+    display: flex;
+    flex-direction:row;
 }
 #barra{
     padding:0px;
@@ -10,8 +12,8 @@
 }
 .cajitar{
     display: flex;
-    width:25%;
-    height:5vh;
+    width:20%;
+    height:8vh;
     background-color:cyan;
     list-style:"none";
     
@@ -20,8 +22,15 @@
     background-color:rgba(144, 6, 255,1);
     color: green;
 }
+.cajacarrito{
+    background-color:yellow;
+    list-style:none;
+}
+.cajacarrito:hover{
+    background-color:green;
+}
 a{
-    width:25vw;
+    width:20vw;
     height:100%;
     display:flex;
     justify-content:center;

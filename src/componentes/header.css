@@ -1,0 +1,49 @@
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(106, 187, 245);
+    background: linear-gradient(277deg, rgba(106, 187, 245, 1) 35%, rgba(144, 6, 255, 1) 86%);
+
+}
+.imgtit {
+    display: flex;
+    flex-direction: row;
+}
+.imagen {
+    width: 15%;
+    padding-Right: 2%;
+
+}
+.icon{
+    display: flex;
+    height:20vh;
+    align-items: flex-end;
+}
+.iconos {
+    display: flex;
+    align-Items: center;
+    
+}
+
+@media (max-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+    }
+    .imgtit{
+        justify-content: center;
+    }
+    .icon{
+        display: none;
+    }
+    .imagen {
+        width: 20%;
+    }
+
+    .titulo {
+        display: none;
+    }
+
+}
