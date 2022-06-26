@@ -1,0 +1,29 @@
+#ventas{
+    background-color:rgb(252, 255, 50);
+    margin: 1vh;
+    padding:1vw;
+    display:flex;
+    justify-content:space-between;
+}
+#producto{
+    display:flex;
+    flex-direction:column;
+
+}
+#cuentas{
+    background-color:rgba(0, 255, 242, 0.815);
+    padding: 0px 2vh;
+}
+p{
+    
+    font-size:18px;
+    font-weight: bold;
+    
+}
+button{
+    background-color:rgb(183, 0, 255);
+}
+
+.botoncito{
+    height:3vh;
+}

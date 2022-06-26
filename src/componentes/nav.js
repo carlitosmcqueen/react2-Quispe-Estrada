@@ -7,10 +7,10 @@ function Nav(){
         
         <nav id="caja">
             <ul id="barra">
-                <li class="cajitar"><a href="/">home</a></li>
-                <li class="cajitar"><a href="/">info</a></li>
-                <li class="cajitar"><a href="/">contacto</a></li>
-                <li class="cajitar"><a href="/">extra</a></li>
+                <li class="cajitar"><a href="/">HOME</a></li>
+                <li class="cajitar"><a href="/">INFO</a></li>
+                <li class="cajitar"><a href="/">CONTACTO</a></li>
+                <li class="cajitar"><a href="/">EXTRA</a></li>
                 <li class="cajacarrito"><a href="/"><CartWidget/></a></li>
             </ul>
         </nav>
