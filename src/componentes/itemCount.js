@@ -6,9 +6,9 @@ import carrito from "../imagenes/carrito.png";
 
 
 
-const Count =({producto,stock})=>{
+const Count =({producto,stock,initial,onAdd})=>{
     
-    const [contador,setContador]=useState(0);
+    const [contador,setContador]=useState(initial);
     const [cantidad,setStock]=useState(stock);
     const [productos,setProductos]=useState(producto);
 
@@ -16,30 +16,27 @@ const Count =({producto,stock})=>{
     const suma=()=>{
         setContador(contador+1);
         setStock(cantidad-1);
-        if (cantidad==0){
+        if (cantidad===0){
             setStock(0);
-            setContador(stock);
+            setContador(stock+1);
         }
 
     }
     const resta = ()=>{
         setContador(contador-1);
         setStock(cantidad+1);
-        if(cantidad==stock){
+        if(cantidad===stock){
             setStock(stock)
-            setContador(0)
+            setContador(initial)
         }
 
     }
     const comprar = ()=>{
-        setProductos("El producto "+[producto]+" se agrego al carrito")
-        if(contador==0){
-            setProductos("POR FAVOR ELIJA UNA CANTIDAD DIFERENTE A 0")
-        }
+        onAdd(productos,setProductos)
+        
 
+        
     }
-
-
 
     return(
         <div id="ventas">
