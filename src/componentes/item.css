@@ -1,0 +1,10 @@
+#caja{
+    display:flex;
+    background-color: aqua;
+}
+.lista{
+    background-color: red;
+    font-size: 12px;
+    padding:1vw;
+
+}

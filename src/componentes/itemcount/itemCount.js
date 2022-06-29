@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import "./itemCount.css";
-import mas from "../imagenes/suma.png";
-import menos from "../imagenes/resta.png";
-import carrito from "../imagenes/carrito.png";
+import mas from "../../imagenes/suma.png";
+import menos from "../../imagenes/resta.png";
+import carrito from "../../imagenes/carrito.png";
 
 
 

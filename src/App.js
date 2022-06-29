@@ -1,5 +1,5 @@
-import Header from './componentes/header';
-import Nav from './componentes/nav';
+import Header from './componentes/header/header';
+import Nav from './componentes/nav/nav';
 import ItemList from "./componentes/itemListContainer";
 
 function App() {

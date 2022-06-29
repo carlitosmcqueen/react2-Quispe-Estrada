@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../imagenes/logo.png';
+import logo from '../../imagenes/logo.png';
 import "./header.css";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
