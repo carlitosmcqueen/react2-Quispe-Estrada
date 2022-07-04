@@ -1,6 +1,7 @@
 #caja{
     display:flex;
     background-color: aqua;
+    
 }
 .lista{
     background-color: red;

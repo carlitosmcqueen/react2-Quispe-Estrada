@@ -5,7 +5,7 @@ import "./nav.css";
 function Nav(){
     return(
         
-        <nav id="caja">
+        <nav id="cajanav">
             <ul id="barra">
                 <li class="cajitar"><a href="/">HOME</a></li>
                 <li class="cajitar"><a href="/">INFO</a></li>

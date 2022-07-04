@@ -1,6 +1,7 @@
 import Header from './componentes/header/header';
 import Nav from './componentes/nav/nav';
-import ItemList from "./componentes/itemListContainer";
+import ItemList from "./componentes/itemlist/itemListContainer";
+import ItemDetail from "./componentes/itemDetails/itemDatailContainer"
 
 function App() {
   return (

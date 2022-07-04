@@ -1,12 +1,15 @@
 import React,{useState,useEffect} from 'react';
-import ItemCount from "./itemcount/itemCount";
-import ItemList from "../componentes/itemList"
+import ItemCount from "../itemcount/itemCount";
+import ItemList from "./itemList";
+import DetallesItem from '../itemDetails/itemDatailContainer'
+
 
 
 const ListaMercado=({greeting})=>{
     const [listaProductos,setlistaProductos]=useState([]);
-    const [carga,setCarga]=useState(false);
-    const [boton,setBoton]=useState(false);
+    const [carga,setCarga]=useState(true);
+    const [detalles,setDetalles] =useState([]);
+
 
     const lista =[
         {id:"1", nombre:"arroz",description:"arroz marca gallo 1 kilo", precio:100,codigo:"748297"},
@@ -15,7 +18,6 @@ const ListaMercado=({greeting})=>{
     
     ]
 
-
                 
     useEffect(()=>{
         const mostrarLista = new Promise((resolve, reject) => {
@@ -23,17 +25,28 @@ const ListaMercado=({greeting})=>{
 
             setTimeout(() =>{
                 if (condition){
-                    resolve(lista);
-
+                    resolve(lista)
+                }else{
+                    reject("ERROR")
                 }
-
             },3000);
         })
-        mostrarLista.then((res) =>setlistaProductos(res)).finally(() =>setCarga(!carga));
         
-    },[boton])
+        mostrarLista.then((res) =>setlistaProductos(res))
+        .catch((err) =>console.error(err))
+        .finally(() =>{setCarga(false)})
+        
+    },[])
 
-    console.log(listaProductos)
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products?limit=3')
+        .then(
+            res=>res.json())
+        .then(json =>setDetalles(json))
+
+    },[])
+
+   
 
 
     const onAdd = (dato,datin)=>{
@@ -43,18 +56,18 @@ const ListaMercado=({greeting})=>{
     return(  
         <>
         <h3 style={styles.posicion}>{greeting}</h3>
-        <button onClick={()=>setBoton(!boton)}>Mostrar lista de productos</button>
-
 
         
-        {carga ? <p>cargando</p> :<ItemList listaProductos={listaProductos}></ItemList>}
-
-
-    
-
+        {carga ? <p>cargando...</p> :<ItemList listaProductos={listaProductos}></ItemList>}
+        
         <ItemCount producto="ARROZ GALLO" stock={5} initial={1} onAdd={onAdd}></ItemCount>
         <ItemCount producto="FIDEOS MATARAZZO" stock={10} initial={1} onAdd={onAdd}></ItemCount>
         <ItemCount producto="LECHE DE COCO" stock={12} initial={1} onAdd={onAdd}></ItemCount>
+
+        
+
+        <DetallesItem detalles={detalles}></DetallesItem>
+
     </>
     )
 
