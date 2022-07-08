@@ -1,0 +1,17 @@
+.cajaProducto{
+    background-color: rgb(103, 209, 241);
+    display: flex;
+    flex-direction:column;
+    border:5px solid;
+    
+}
+.cajaProductoD{
+    display: flex;
+    padding:1vh;
+}
+.cajaProductoTexto{
+    padding:2vh;
+}
+img{
+    height:30vh;
+}

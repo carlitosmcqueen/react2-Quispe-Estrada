@@ -15,11 +15,12 @@ const styles ={
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height:"8vh",
-        width:"20vw",
+        height:"7vh",
+         
+        
     },
     imagen:{
         height:"70%",
-        width:"50%",
-    }
+        width:"90%",
+    },
 }

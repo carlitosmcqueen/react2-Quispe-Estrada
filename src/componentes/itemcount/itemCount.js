@@ -37,6 +37,7 @@ const Count =({producto,stock,initial,onAdd})=>{
 
         
     }
+    
 
     return(
         <div id="ventas">

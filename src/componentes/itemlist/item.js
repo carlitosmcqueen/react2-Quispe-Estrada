@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import "./item.css";
 
 
@@ -7,12 +7,21 @@ const ItemCaja=({producto})=>{
     return (
 
             <div id="caja">
-                <h3>Lista de productos: </h3>
-                <p class="lista">Nombre de producto :  {producto.nombre}</p>
-                <p class="lista">Descripción : {producto.description}</p>
-                <p class="lista">Precio :{producto.precio}</p>
-            </div>
+                <div class="cajaTexto">
+                    <img class="img" src={producto.image} alt={producto.title}></img>
+                    <div class="texto">
+                        <p>Producto : {producto.title}</p>
+                        <p>Precio : {producto.price}</p>
+                    </div>
+                    
+                </div>
+                <div class="cajaBoton">
+                <Link to={`/detail/${producto.id}`}>Ver detalles</Link>
 
+                </div>
+                
+            </div>
+            
         
     )
     

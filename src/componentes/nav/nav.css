@@ -1,44 +1,31 @@
-#caja{
-    padding:0px;
-    display: flex;
-    flex-direction:row;
-}
-#barra{
-    padding:0px;
-    margin:0px;
-    display: flex;
-    flex-direction:row;
-
-}
-.cajitar{
-    display: flex;
-    width:20%;
-    height:8vh;
-    background-color:cyan;
-    list-style:"none";
+#contenedorLink{
+    display:flex;
     
 }
-.cajitar:hover{
-    background-color:rgba(144, 6, 255,1);
-    color: green;
+#nav{
+    display:flex;
+    flex-direction: row;
+    background-color:rgb(71, 143, 252);
+    margin: 0px;
+    width:100%;
+    justify-content: space-around;
+    align-items:center;
+    
 }
-.cajacarrito{
-    background-color:yellow;
-    list-style:none;
-}
-.cajacarrito:hover{
-    background-color:green;
-}
+
 a{
-    width:20vw;
-    height:100%;
+    
     display:flex;
     justify-content:center;
-    align-items: center;
-    text-decoration:none;
+    align-items:center;
     font-size:20px;
-    font-Weight:bold;
+    text-decoration: none;
+    height: 7vh;
+    width: 20vw;
+    
+
 }
-a:hover{
-    color: antiquewhite;
+.active{
+    font-weight: bold;
+    color: white;
 }

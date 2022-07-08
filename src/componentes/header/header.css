@@ -2,16 +2,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(106, 187, 245);
-    background: linear-gradient(277deg, rgba(106, 187, 245, 1) 35%, rgba(144, 6, 255, 1) 86%);
+    background: rgb(121, 199, 255);
+    background: linear-gradient(277deg, rgba(72, 204, 236, 1.00) 35%, rgba(142, 231, 243, 1.00) 86%);
 
 }
 .imgtit {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .imagen {
-    width: 15%;
+    height: 20vh;
+    width: 10vw;
+    
     padding-Right: 2%;
 
 }

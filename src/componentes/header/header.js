@@ -9,7 +9,7 @@ function Header(props) {
         <header class="barra">
             <div class="imgtit">
                 <img class="imagen" src={logo} alt="logo"></img>
-                <h1 class="titulo">Pagina <br/>de <br/>Internet Generica</h1>
+                <h1 class="titulo">Mercado <br/>Coder</h1>
             </div>
             
             <div class="icon">

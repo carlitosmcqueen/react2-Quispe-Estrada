@@ -1,21 +1,32 @@
 import React from 'react';
-import "./itemdetail.css"
+import ItemCount from '../itemcount/itemCount'
+import "./itemD.css";
 
 const ItemDetail=({detalles})=>{
-    return(
+    
+    const onAdd = (dato,datin)=>{
+        datin("El producto "+[dato]+" se agrego al carrito");
+             
+    }
 
-        <div id="cajaDetalle">
-            <div id="cajaDetalleImg">
-                <img id="pepito" src={detalles.image} alt="ropa"></img>
-                <div id="cajaDetalleDatos">
-                    <h1 id="tituloDetalle">{detalles.title}</h1>
-                    <p id="descripcionDetalle">{detalles.description}</p>
+
+
+    return (
+        
+        <div class="cajaProducto">
+            <div class="cajaProductoD">
+                <div>
+                    <img src={detalles.image} alt={detalles.title}></img>
                 </div>
-                
+                <div class="cajaProductoTexto">
+                    <p>{detalles.title}</p>
+                    <p>{detalles.description}</p>
+                    <p> Precio : {detalles.price}</p>
+                </div>
+
             </div>
-            <div id="cajaPrecio">
-                <p>Precio: {detalles.price}</p>
-            </div>
+            
+            <ItemCount producto={detalles.title} stock={detalles.stock} initial={1} onAdd={onAdd}></ItemCount>
         </div>
     )
 }
