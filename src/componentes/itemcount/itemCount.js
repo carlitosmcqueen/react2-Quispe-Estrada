@@ -6,7 +6,7 @@ import carrito from "../../imagenes/carrito.png";
 
 
 
-const Count =({producto,stock,initial,onAdd})=>{
+const Count =({producto,stock,initial,onAdd,confirmar})=>{
     
     const [contador,setContador]=useState(initial);
     const [cantidad,setStock]=useState(stock);
@@ -33,9 +33,9 @@ const Count =({producto,stock,initial,onAdd})=>{
     }
     const comprar = ()=>{
         onAdd(productos,setProductos)
+        confirmar()
         
 
-        
     }
     
 

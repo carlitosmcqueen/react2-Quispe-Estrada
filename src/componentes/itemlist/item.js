@@ -16,7 +16,7 @@ const ItemCaja=({producto})=>{
                     
                 </div>
                 <div class="cajaBoton">
-                <Link to={`/detail/${producto.id}`}>Ver detalles</Link>
+                <Link id="botonListLink" to={`/detail/${producto.id}`}><button id="botonList">Ver detalles</button></Link>
 
                 </div>
                 

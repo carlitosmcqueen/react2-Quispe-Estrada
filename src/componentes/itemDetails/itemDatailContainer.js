@@ -24,12 +24,7 @@ const GetItem =()=>{
             }); 
 
     },[id])
-    console.log(detalles);               
     
-    
-    
-
-   
     return (
         <div>
             {carga?<h3>CARGANDO...</h3>:<ItemDetail detalles={detalles}></ItemDetail>}  

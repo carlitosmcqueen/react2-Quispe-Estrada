@@ -1,14 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ItemCount from '../itemcount/itemCount'
+import { Link } from "react-router-dom";
+import "./itemD.css";
+
 import "./itemD.css";
 
 const ItemDetail=({detalles})=>{
+    const [estado,setEstado]=useState(false);
     
     const onAdd = (dato,datin)=>{
-        datin("El producto "+[dato]+" se agrego al carrito");
+         datin("El producto "+[dato]+" se agrego al carrito");
              
     }
-
+    const confirmar=()=>{
+        setEstado(true)
+    }
+    
 
 
     return (
@@ -25,8 +32,8 @@ const ItemDetail=({detalles})=>{
                 </div>
 
             </div>
+            {estado ? <Link id="botonConfirmarLink" to="./cart"><button id="botonConfirmar">Confirmar Compra</button></Link> :<ItemCount producto={detalles.title} stock={detalles.stock} initial={1} onAdd={onAdd}  confirmar={confirmar}></ItemCount>}
             
-            <ItemCount producto={detalles.title} stock={detalles.stock} initial={1} onAdd={onAdd}></ItemCount>
         </div>
     )
 }

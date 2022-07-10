@@ -15,7 +15,7 @@ function Nav(){
     return(
         <div id="contenedorLink">
             <nav id="nav">
-                {LinkNav.map((LinkNav) =>(<NavLink class="link" key={LinkNav.id} to={LinkNav.path}>{LinkNav.name}</NavLink>))}
+                {LinkNav.map((LinkNav) =>(<NavLink id="linkNav"class="link" key={LinkNav.id} to={LinkNav.path}>{LinkNav.name}</NavLink>))}
             </nav>
             <Link to="/cart"><CartWidget /></Link>
 

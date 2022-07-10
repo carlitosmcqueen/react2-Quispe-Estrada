@@ -16,11 +16,12 @@ const styles ={
         justifyContent: 'center',
         alignItems: 'center',
         height:"7vh",
+        width:"20vw",
          
         
     },
     imagen:{
         height:"70%",
-        width:"90%",
+        width:"40%",
     },
 }
