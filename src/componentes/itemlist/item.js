@@ -4,6 +4,7 @@ import "./item.css";
 
 
 const ItemCaja=({producto})=>{
+
     return (
 
             <div id="caja">

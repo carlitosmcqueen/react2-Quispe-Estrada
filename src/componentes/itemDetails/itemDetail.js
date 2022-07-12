@@ -1,19 +1,27 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import ItemCount from '../itemcount/itemCount'
 import { Link } from "react-router-dom";
 import "./itemD.css";
+import {contexto} from "../Context/CartContext"
 
-import "./itemD.css";
+
 
 const ItemDetail=({detalles})=>{
     const [estado,setEstado]=useState(false);
+
+    const {addProduct}=useContext(contexto)
     
     const onAdd = (dato,datin)=>{
-         datin("El producto "+[dato]+" se agrego al carrito");
+        datin("El producto "+[dato]+" se agrego al carrito");
+
              
     }
-    const confirmar=()=>{
+    const confirmar=(count)=>{
+        addProduct({...detalles,qty:count})
+        
         setEstado(true)
+        
+
     }
     
 

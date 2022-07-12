@@ -1,14 +1,22 @@
-import React from 'react';
+import React ,{useContext}from 'react';
 import carrito from '../imagenes/carrito.png';
+import {contexto} from './Context/CartContext';
 
-const cartWidget =()=>{
+const CartWidget =()=>{
+
+    const {qtyProducts}=useContext(contexto);
+    
     return(
+        <>
         <div caja style={styles.caja}>
         <img style={styles.imagen} src={carrito} alt="carticon" />
+        <p>{qtyProducts}</p>
+        
         </div>
+        </>
     )
 }
-export default cartWidget
+export default CartWidget
 
 const styles ={
     caja: {
