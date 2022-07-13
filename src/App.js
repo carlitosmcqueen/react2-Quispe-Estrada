@@ -15,9 +15,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <CustomProvider>
       <Header/>
       
-      <CustomProvider>
+      
       <Nav/>
       <Routes>
         <Route path="/" element={<ItemList greeting="Bienvenido a Mercado Coder"/>}></Route>

@@ -33,7 +33,8 @@ const Count =({producto,stock,initial,onAdd,confirmar})=>{
     }
     const comprar = ()=>{
         onAdd(productos,setProductos)
-        confirmar()
+        
+        confirmar(contador)
         
 
     }

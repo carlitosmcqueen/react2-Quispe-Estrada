@@ -16,8 +16,9 @@ const ItemDetail=({detalles})=>{
 
              
     }
-    const confirmar=(count)=>{
-        addProduct({...detalles,qty:count})
+    const confirmar=(contador)=>{
+
+        addProduct({...detalles, qty: contador});
         
         setEstado(true)
         

@@ -5,6 +5,7 @@ export const contexto=createContext();
 const {Provider} = contexto;
 
 const CustomProvider =({children})=>{
+
     const [productos,setProductos]=useState([])
 
     const [qtyProducts,setQtyProducts]=useState(0)
@@ -26,18 +27,16 @@ const CustomProvider =({children})=>{
             const found=productos.find(p=>p.id===producto.id)
             const index= productos.indexOf(found)
             const aux=[...productos]
-            aux[index].qty+=producto.qty
+            aux[index].qty += producto.qty
             setProductos(aux)
 
         }else{
             setProductos([...productos,producto]);
         }
+        
     }
-
-
     const deleteProduct=(id)=>{
-        setProductos(productos.filter(producto=>producto.id !== id))
-         
+        setProductos(productos.filter(producto=>producto.id !== id))    
     }
     const isInCart=(id)=>{
         //find cual encontro
@@ -45,13 +44,11 @@ const CustomProvider =({children})=>{
         return productos.some(productos=>productos.id===id)
         
     }
-
     const clear=()=>{
         setProductos([])
     }
-
     return (
-        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts}}>
+        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts,isInCart}}>
             {children}
         </Provider>
     )
