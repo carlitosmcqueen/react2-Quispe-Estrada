@@ -29,19 +29,19 @@ const ItemDetail=({detalles})=>{
 
     return (
         
-        <div class="cajaProducto">
-            <div class="cajaProductoD">
+        <div className="cajaProducto">
+            <div className="cajaProductoD">
                 <div>
-                    <img src={detalles.image} alt={detalles.title}></img>
+                    <img id="imagenDetalle" src={detalles.image} alt={detalles.title}></img>
                 </div>
-                <div class="cajaProductoTexto">
+                <div className="cajaProductoTexto">
                     <p>{detalles.title}</p>
                     <p>{detalles.description}</p>
                     <p> Precio : {detalles.price}</p>
                 </div>
 
             </div>
-            {estado ? <Link id="botonConfirmarLink" to="./cart"><button id="botonConfirmar">Confirmar Compra</button></Link> :<ItemCount producto={detalles.title} stock={detalles.stock} initial={1} onAdd={onAdd}  confirmar={confirmar}></ItemCount>}
+            {estado ? <Link id="botonConfirmarLink" to="/cart"><button id="botonConfirmar">Ir al carrito</button></Link> :<ItemCount producto={detalles.title} stock={detalles.stock} initial={1} onAdd={onAdd}  confirmar={confirmar}></ItemCount>}
             
         </div>
     )

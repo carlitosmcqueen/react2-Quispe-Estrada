@@ -27,12 +27,13 @@ const styles ={
         justifyContent: 'center',
         alignItems: 'center',
         height:"7vh",
-        width:"20vw",
+        width:"10vw",
          
         
     },
     imagen:{
-        height:"70%",
-        width:"40%",
+        display: 'flex',
+        height:"80%",
+        width:"80%",
     },
 }

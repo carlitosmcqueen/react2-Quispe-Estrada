@@ -48,9 +48,9 @@ const Count =({producto,stock,initial,onAdd,confirmar})=>{
             </div>
             <div id="cuentas">
                 <p>COMPRAR : {contador}</p>
-                <button onClick={suma}><img class="botoncito" src={mas} alt="suma"></img></button>
-                <button onClick={resta}><img class="botoncito" src={menos} alt="resta"></img></button>
-                <button onClick={comprar}><img class="botoncito" src={carrito} alt="comprar"></img></button>
+                <button className="botoncito" onClick={suma}><img className="botoncitoImg" src={mas} alt="suma"></img></button>
+                <button className="botoncito" onClick={resta}><img className="botoncitoImg" src={menos} alt="resta"></img></button>
+                <button className="botoncito" onClick={comprar}><img className="botoncitoImg" src={carrito} alt="comprar"></img></button>
 
             </div>
         </div>

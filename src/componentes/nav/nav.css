@@ -12,6 +12,16 @@
     align-items:center;
     
 }
+#nav2{
+    display:flex;
+    flex-direction: row;
+    background-color:rgb(71, 143, 252);
+    margin: 0px;
+    width:100vw;
+    justify-content: space-around;
+    align-items:center;
+
+}
 
 #linkNav{
     
@@ -28,4 +38,14 @@
 .active{
     font-weight: bold;
     color: white;
+}
+
+#linkCartWidget{
+    display:flex;
+    width: 10vw;
+
+}
+#linkCartWidget2{
+    display:none;
+    width: 10vw;
 }

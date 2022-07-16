@@ -18,10 +18,11 @@ p{
     font-size:18px;
     font-weight: bold;  
 }
-button{
-    background-color:rgb(248, 250, 115);
-}
-
 .botoncito{
+    height:5vh;
+    background-color:rgb(248, 250, 115);
+
+}
+.botoncitoImg{
     height:3vh;
 }

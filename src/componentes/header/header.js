@@ -6,14 +6,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 function Header(props) {
     return (
 
-        <header class="barra">
-            <div class="imgtit">
-                <img class="imagen" src={logo} alt="logo"></img>
-                <h1 class="titulo">Mercado <br/>Coder</h1>
+        <header className="barra">
+            <div className="imgtit">
+                <img className="imagen" src={logo} alt="logo"></img>
+                <h1 className="titulo">Mercado <br/>Coder</h1>
             </div>
             
-            <div class="icon">
-                <div class="iconos">
+            <div className="icon">
+                <div className="iconos">
                     <FacebookIcon/>
                     <TwitterIcon/>
                 </div>

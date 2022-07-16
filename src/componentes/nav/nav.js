@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import CartWidget from '../cartWidget';
 import "./nav.css";
 import { Link,NavLink} from 'react-router-dom';
+import {contexto} from '../Context/CartContext'
 
 function Nav(){
 
@@ -12,14 +13,23 @@ function Nav(){
         {name:"Gorras", id:3,path: '/category/gorras'}
 
     ];
+    const {productos}=useContext(contexto)
+    
     return(
         <div id="contenedorLink">
-            <nav id="nav">
-                {LinkNav.map((LinkNav) =>(<NavLink id="linkNav"class="link" key={LinkNav.id} to={LinkNav.path}>{LinkNav.name}</NavLink>))}
+
+            <nav id={productos.length===0 ? 'nav2':"nav"}>
+                {LinkNav.map((LinkNav) =>(<NavLink id="linkNav" key={LinkNav.id} to={LinkNav.path}>{LinkNav.name}</NavLink>))}
             </nav>
-            <Link to="/cart"><CartWidget /></Link>
+            <div id="linkCartWidget">
+                <Link  to="/cart"><CartWidget /></Link>
+            </div>
+            {/* <div id={productos===0?"linkCartWidget":"linkCartWidget2"}>
+                <Link  to="/cart"><CartWidget /></Link>
+            </div> */}
 
         </div>
     );
 };
 export default Nav;
+

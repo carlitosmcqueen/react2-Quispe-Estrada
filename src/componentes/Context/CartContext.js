@@ -47,8 +47,13 @@ const CustomProvider =({children})=>{
     const clear=()=>{
         setProductos([])
     }
+    const calcularTotal = () => {
+        return productos.reduce(
+            (total, suma) => total + suma.price * suma.qty,0
+        );
+    };
     return (
-        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts,isInCart}}>
+        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts,isInCart,calcularTotal}}>
             {children}
         </Provider>
     )
