@@ -1,8 +1,7 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import CartWidget from '../cartWidget';
 import "./nav.css";
 import { Link,NavLink} from 'react-router-dom';
-import {contexto} from '../Context/CartContext'
 
 function Nav(){
 
@@ -13,7 +12,6 @@ function Nav(){
         {name:"Gorras", id:3,path: '/category/gorras'}
 
     ];
-    const {productos}=useContext(contexto)
     
     return(
         <div id="contenedorLink">
@@ -24,9 +22,7 @@ function Nav(){
             <div id="linkCartWidget">
                 <Link  to="/cart"><CartWidget /></Link>
             </div>
-            {/* <div id={productos===0?"linkCartWidget":"linkCartWidget2"}>
-                <Link  to="/cart"><CartWidget /></Link>
-            </div> */}
+           
 
         </div>
     );
