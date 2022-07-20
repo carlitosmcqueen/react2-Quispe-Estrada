@@ -18,7 +18,7 @@ function Nav(){
     return(
         <div id="contenedorLink">
 
-            <nav id={productos.length===0 ? 'nav2':"nav"}>
+            <nav id="nav">
                 {LinkNav.map((LinkNav) =>(<NavLink id="linkNav" key={LinkNav.id} to={LinkNav.path}>{LinkNav.name}</NavLink>))}
             </nav>
             <div id="linkCartWidget">

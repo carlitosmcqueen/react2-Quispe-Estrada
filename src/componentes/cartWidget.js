@@ -10,10 +10,9 @@ const CartWidget =()=>{
         <>
         <div caja style={styles.caja}>
         <img style={styles.imagen} src={carrito} alt="carticon" />
-        <p>{qtyProducts}
+        <p>{qtyProducts > 0 &&  qtyProducts}</p>
 
-        
-        </p>
+
         
         </div>
         </>

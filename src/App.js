@@ -45,3 +45,19 @@ function App() {
 export default App;
 
 
+/*
+
+base de datos SQL es un excel basicamente osea una tabla que contiene datos de cada usuario una igual a la otra son RELACIONALES
+
+
+base de datos no relaciones no tienen los mismos datos, pueden ser mas flexibles y aca losdatos no se guardan en datos sino en Colecciones 
+
+dentro de las colleciones tengo documentos y dentro de ellos tengo datos (uno puede tener nombre, apellido,dirrecion   y  otro puede tener nombre,dni, piso no necesariamente deben ser iguales)
+
+
+
+
+
+En firebase no vamos a estar trabajando con tablas sino con documentos 
+
+*/

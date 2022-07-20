@@ -2,27 +2,31 @@ import React,{useState,useEffect} from 'react';
 import { getProd } from '../../mock/productos';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './itemDetail'
-
+import {db} from '../../firebase/firebase'
+import {doc,getDoc,collection} from 'firebase/firestore';
 
 const GetItem =()=>{
     const [detalles,setDetalles] =useState({});
     const [carga,setCarga] =useState(true);
-    //ATENTO A ESTO
+    
     const {id} = useParams();
 
     
     useEffect(()=>{
-        getProd(id)
-            .then((res) => {
-                setDetalles(res);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-            .finally(() => {
-                setCarga(false);
+        const productosCollection =collection(db,"productos")
+        const refDoc = doc(productosCollection,id);
+        getDoc(refDoc).then(result=>{
+
+            setDetalles({
+                id: result.id,
+                ...result.data(),
             }); 
 
+        })
+        .catch(err=>console.error(err))
+        .then(()=>setCarga(false))
+        
+        
     },[id])
     
     return (
