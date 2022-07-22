@@ -1,10 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
+//mirar el .env 
+//process : es una variable "global" que me otorga info sobre la ejecucion del proyecto
 const firebaseConfig = {
   apiKey: "AIzaSyDgr8EffHOlivngBtAVNyvzpUNQxqaytBc",
   authDomain: "mercadocoder.firebaseapp.com",

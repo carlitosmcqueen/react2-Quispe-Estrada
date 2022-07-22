@@ -3,6 +3,7 @@ import Nav from './componentes/nav/nav';
 import ItemList from "./componentes/itemlist/itemListContainer";
 import ItemDetail from "./componentes/itemDetails/itemDatailContainer";
 import CustomProvider from "./componentes/Context/CartContext";
+import BuyDate from "./componentes/BuyDate/buyDate"
 import Carta from "./componentes/Cart/cart"
 
 import{
@@ -28,7 +29,7 @@ function App() {
         <Route path="/category/:categoryId" element={<ItemList greeting="Bienvenido a Mercado Coder"/>}></Route>
         <Route path="/detail/:id" element={<ItemDetail></ItemDetail>}></Route>
         <Route path="/cart" element={<Carta></Carta>}></Route>
-
+        <Route path="/Compra" element={<BuyDate/>}></Route>
 
       </Routes>
 

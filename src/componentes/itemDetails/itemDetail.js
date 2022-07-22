@@ -22,7 +22,6 @@ const ItemDetail=({detalles})=>{
         
         setEstado(true)
         
-
     }
     
 

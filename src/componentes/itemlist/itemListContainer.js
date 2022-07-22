@@ -28,7 +28,6 @@ const ListaMercado=({greeting})=>{
                     ...doc.data()
                 }
             })
-            console.log(lista)
             setlistaProductos(lista)
         })
         .catch(error => console.log(error))
