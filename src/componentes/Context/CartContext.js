@@ -5,18 +5,36 @@ export const contexto=createContext();
 const {Provider} = contexto;
 
 const CustomProvider =({children})=>{
+    const [productos,setProductos]=useState([]);
 
-    const [productos,setProductos]=useState([])
+    /*
+    Profe hhasta aca pude llegar sin problemas 
+    Le explico pude hacer que los items se queden en el carrito al reiniciar la pagina sin problema 
+    Mi error aparece cuando en finalizarCompra en buyDate borro el local storage "lol" en ese momento se rompe mi codigo ya que productos se convierte en null 
+    
+    y el .forEach y el .some dejan de funcionar se le ocurre una solucion 
 
-    const [qtyProducts,setQtyProducts]=useState(0)
+    En comentarios le dejo como intente solucionar el problema
+    */
+    // const [productos,setProductos]=useState(JSON.parse(localStorage.getItem("lol")));
+    
+
+
+    const [qtyProducts,setQtyProducts]=useState(0);
 
     const getQtyProducts=()=>{
+        // if((productos===null)){
+        //     console.log("vacio")
+        // }else{
+        //     let qty=0;
+        //     productos.forEach(producto => qty += producto.qty)
+        //     setQtyProducts(qty)
+        // }
+
         let qty=0;
         productos.forEach(producto => qty += producto.qty)
-        //le agrego al array la prop cantidad
         setQtyProducts(qty)
     }
-
     useEffect(() =>{
         getQtyProducts()
     },[productos])
@@ -29,7 +47,6 @@ const CustomProvider =({children})=>{
             const aux=[...productos]
             aux[index].qty += producto.qty
             setProductos(aux)
-
         }else{
             setProductos([...productos,producto]);
         }
@@ -39,8 +56,7 @@ const CustomProvider =({children})=>{
         setProductos(productos.filter(producto=>producto.id !== id))    
     }
     const isInCart=(id)=>{
-        //find cual encontro
-        //some true false
+        
         return productos.some(productos=>productos.id===id)
         
     }

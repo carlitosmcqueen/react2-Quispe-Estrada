@@ -14,18 +14,12 @@ const ItemCaja=({producto})=>{
                     <div className="texto">
                         <p>Producto : {producto.title}</p>
                         <p>Precio : {producto.price}</p>
-                    </div>
-                    
+                    </div>                 
                 </div>
                 <div className="cajaBoton">
-                <Link id="botonListLink" to={`/detail/${producto.id}`}><button id="botonList">Ver detalles</button></Link>
-
-                </div>
-                
-            </div>
-            
-        
+                <Link to={`/detail/${producto.id}`}><button id="botonList">Ver detalles</button></Link>
+                </div>           
+            </div> 
     )
-    
 }
 export default ItemCaja

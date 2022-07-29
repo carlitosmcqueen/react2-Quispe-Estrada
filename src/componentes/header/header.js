@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from '../../imagenes/logo.png';
 import "./header.css";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 function Header(props) {
     return (
-
         <header className="barra">
             <div className="imgtit">
-                <img className="imagen" src={logo} alt="logo"></img>
+                <img className="imagen" src="https://png.pngtree.com/png-vector/20201221/ourlarge/pngtree-clothing-store-logo-png-image_2586576.jpg" alt="logo"></img>
                 <h1 className="titulo">Mercado <br/>Coder</h1>
             </div>
             

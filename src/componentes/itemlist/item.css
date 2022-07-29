@@ -1,11 +1,12 @@
 #caja{
     display:flex;
-    background-color: rgb(115, 255, 255);
+    background-color: rgb(228, 251, 252);
     justify-content:space-between;
     align-items:center;
     padding:1vw;
-    border: 3px solid black;
-    margin: 2px;
+    border-radius:5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.808);
+    margin: 1vh;
     
 }
 .cajaTexto{
@@ -23,19 +24,13 @@
 .texto{
     display: flex;
     flex-direction:column;
-    box-sizing: border-box;
-}
-.lista{
-    background-color: red;
-    font-size: 12px;
-
-}
-#botonList{
-    background-color:yellow;
-    height: 4vh;
-    width:8vw;
     
 }
-#botonListLink{
-    text-decoration: none;
+
+#botonList{
+    background-color:rgb(248, 240, 125);
+    height: 5vh;
+    width:10vw;
+    border:1px solid black;
+    border-radius: 10px;
 }
