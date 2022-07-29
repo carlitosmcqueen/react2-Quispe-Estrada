@@ -7,7 +7,7 @@ import {contexto} from "../Context/CartContext"
 const ItemDetail=({detalles})=>{
     const [estado,setEstado]=useState(false);
 
-    const {addProduct}=useContext(contexto)
+    const {addProduct}=useContext(contexto);
     
     const onAdd = (contador)=>{
         addProduct({...detalles, qty: contador});

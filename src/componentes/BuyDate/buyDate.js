@@ -35,11 +35,8 @@ const BuyDate=()=>{
                     total:calcularTotal(),
                 })
                 .then(result=>{
-
                     setventaId(result.id);})
-
                     clear()
-
                 .catch((error) =>{
 
                     console.log(error)
