@@ -1,5 +1,11 @@
 #buy{
-    display: flex;
+    display:flex;
     flex-direction: column;
-    width:50vw;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(214, 248, 250);
+    padding:1vw;
+    border-radius:5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.808);
+    margin: 2vw;
 }

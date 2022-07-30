@@ -1,5 +1,7 @@
 import React from 'react';
 import "./header.css";
+import { Link } from "react-router-dom";
+
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 function Header(props) {
@@ -11,12 +13,12 @@ function Header(props) {
             </div>
             
             <div className="icon">
-                <div className="iconos">
+                {/* <div className="iconos">
                     <FacebookIcon/>
                     <TwitterIcon/>
-                </div>
+                </div> */}
+                <Link to="/login"><h2>IniciarSeccion/Crear Usuario</h2></Link>
             </div>
-            
         </header>
     );
 };

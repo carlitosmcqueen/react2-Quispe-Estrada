@@ -72,22 +72,14 @@ const BuyDate=()=>{
             {error && <p style={{color:'red'}}>Todos los campos son requeridos</p>}
 
         </div>
-
         :<div>
-
             <h3>Muchas gracias por tu compra!</h3>
-
             <h5>Tu orden : {ventaId}</h5>
-
             <button onClick={()=>navigate('/')}>Volver</button>
-
         </div>
-
         }
         </>
-
     )
-
 }
 
 export default BuyDate

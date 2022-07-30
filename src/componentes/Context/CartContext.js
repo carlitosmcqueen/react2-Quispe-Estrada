@@ -1,9 +1,6 @@
 import React,{createContext,useState,useEffect} from 'react';
-
 export const contexto=createContext();
-
 const {Provider} = contexto;
-
 const CustomProvider =({children})=>{
     const [productos,setProductos]=useState([]);
 
