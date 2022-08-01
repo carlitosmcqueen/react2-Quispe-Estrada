@@ -9,12 +9,12 @@ const Carta=()=>{
     //aca probando cosas 
     if((productos.length===0)){
         return (
-        <div id="carta">
+        <div id="vacio">
             <h2>Su carrito esta vacio, puede llenarlo <Link to="/">acá</Link></h2>
         </div>)
     }
     return (
-        <div id="carta">
+        <div id={productos.length>2?"carta":"carta2"}>
             {productos.map((lista)=><div id="ListaCompra" key={lista.id}>
                 <div id="ListaCompraDatos">
                     <img id="imagenLista" src={lista.image} alt={lista.title}></img>

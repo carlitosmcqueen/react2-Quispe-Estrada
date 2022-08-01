@@ -1,12 +1,7 @@
 import React,{useState,useContext} from 'react';
 import "./itemCount.css";
-import mas from "../../imagenes/suma.png";
-import menos from "../../imagenes/resta.png";
-import carrito from "../../imagenes/carrito.png";
+
 import {contexto} from "../Context/CartContext";
-
-
-
 
 const Count =({producto,stock,initial,onAdd})=>{
 
@@ -44,9 +39,9 @@ const Count =({producto,stock,initial,onAdd})=>{
             </div>
             <div id="cuentas">
                 <p>COMPRAR : {contador}</p>
-                <button className="botoncito" onClick={suma}><img className="botoncitoImg" src={mas} alt="suma"></img></button>
-                <button className="botoncito" onClick={resta}><img className="botoncitoImg" src={menos} alt="resta"></img></button>
-                <button className="botoncito" onClick={comprar}><img className="botoncitoImg" src={carrito} alt="comprar"></img></button>
+                <button className="botoncito" onClick={suma}><img className="botoncitoImg" src="https://i.pinimg.com/originals/38/7c/e6/387ce6da9e9f03ff6cd8abc680e974be.png" alt="suma"></img></button>
+                <button className="botoncito" onClick={resta}><img className="botoncitoImg" src="https://cdn-icons-png.flaticon.com/512/51/51363.png" alt="resta"></img></button>
+                <button className="botoncito" onClick={comprar}><img className="botoncitoImg" src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="comprar"></img></button>
 
             </div>
         </div>

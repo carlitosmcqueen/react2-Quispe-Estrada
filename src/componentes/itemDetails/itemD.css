@@ -2,13 +2,14 @@
     background-color: rgb(196, 237, 250);
     border-radius: 20px;
     box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.808);
-    width: 70vw;
-    margin:5vh;
+    width: 60vw;
+    margin:3vh;
 }
 #cajaProductoD{
     display: flex;
     align-items: center;
     justify-content:center;
+    height: 50vh;
     padding:3vh;
     
 }
@@ -27,14 +28,14 @@
 }
 #botonConfirmar{
     height:7vh;
-    width:35vw;
+    width:30vw;
     font-size: 20px;
     background-color:rgb(255, 252, 82);
     font-weight:bold;
 }
 #volver{
     height:7vh;
-    width:35vw;
+    width:30vw;
     font-size: 20px;
     background-color:rgb(255, 252, 82);
     font-weight:bold;
@@ -43,4 +44,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#cargando{
+    display: flex;
+    align-items:flex-start;
+    height:60vh;
 }

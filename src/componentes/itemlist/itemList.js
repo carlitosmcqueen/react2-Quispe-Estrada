@@ -2,8 +2,6 @@ import React from 'react';
 import ItemCaja from "./item";
 import "./item.css"
 
-
-
 const ItemList=({listaProductos})=>{
     
 

@@ -53,4 +53,9 @@
     flex-direction: column;
     justify-content:center;
 }
+#cargando{
+    display: flex;
+    align-items:flex-start;
+    height:55vh;
+}
 

@@ -1,0 +1,12 @@
+#cajaCart{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:7vh;
+    width: 10vw;
+}
+#imagenCart{
+    display:flex;
+    height:80%;
+    width: 80%;
+}

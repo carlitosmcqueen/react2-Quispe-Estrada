@@ -42,7 +42,7 @@ const ListaMercado=({greeting})=>{
         <div id="listaProductos">
         <h3 id="posicion">{greeting}</h3>
         <div id="card">
-        {carga ? <p>cargando...</p> :<ItemList listaProductos={listaProductos}></ItemList>}
+        {carga ? <div id="cargando"><p>CARGANDO</p></div> :<ItemList listaProductos={listaProductos}></ItemList>}
         </div>
 
         </div>

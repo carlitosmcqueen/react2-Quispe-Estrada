@@ -26,7 +26,7 @@ const GetItem =()=>{
     },[id])   
     return (
         <div id="itemDetailConteiner">
-            {carga?<h3>CARGANDO...</h3>:<ItemDetail  detalles={detalles}></ItemDetail>}  
+            {carga? <div id="cargando"><h3>CARGANDO</h3></div>:<ItemDetail  detalles={detalles}></ItemDetail>}  
         </div>
     )
 

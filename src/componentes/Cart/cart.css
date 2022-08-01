@@ -2,8 +2,21 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    
 }
+#carta2{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:67vh;
 
+}
+#vacio{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    height:60vh;
+}
 #ListaCompra{
     display:flex;
     flex-direction: row;
