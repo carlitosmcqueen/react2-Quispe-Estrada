@@ -9,11 +9,12 @@ import {contexto} from "../Context/CartContext";
 
 
 const Count =({producto,stock,initial,onAdd})=>{
-    const{productos}=useContext(contexto)
-    
+
+    const {productos}=useContext(contexto)
     const [contador,setContador]=useState(initial);
     const [cantidad,setStock]=useState(stock);
     const [productosM,setProductos]=useState(producto);
+
     const suma=()=>{
         setContador(contador+1);
         setStock(cantidad-1);
@@ -34,11 +35,7 @@ const Count =({producto,stock,initial,onAdd})=>{
     const comprar = (e)=>{
         onAdd(contador)
         localStorage.setItem("lol",JSON.stringify(productos));
-        
-
-
     }
-    
     return(
         <div id="ventas">
             <div id="producto">

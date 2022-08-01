@@ -1,20 +1,15 @@
 import React,{useState,useContext} from 'react';
-
 import {contexto} from "../Context/CartContext";
-
 import {db} from '../../firebase/firebase';
-
 import { collection,addDoc,serverTimestamp} from 'firebase/firestore';
-
 import "./buydate.css"
-
-import {  useNavigate } from 'react-router-dom';
-
+import {  Link, useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2"
 
 
 const BuyDate=()=>{
 
-    const {productos,calcularTotal, clear}=useContext(contexto);
+    const {productos,calcularTotal,clear,loginUser,usuarioLogeado}=useContext(contexto);
     const [buyer,setBuyer] = useState([])
     const [ventaId,setventaId] = useState("")
     const [error,setError] = useState(false)
@@ -22,24 +17,27 @@ const BuyDate=()=>{
     const finalizarCompra=()=>{
         //aca borro "lol" y se convierte en null
         localStorage.removeItem("lol");
-        if(Object.values(buyer).length === 3){
-
+        if(Object.values(buyer).length === 5){
             setError(false)
-
             const ventasUsuario = collection(db,"ventas");
-
                 addDoc(ventasUsuario,{
                     items : productos,
+                    usuario:usuarioLogeado,
                     buyer,
                     date:serverTimestamp(),
                     total:calcularTotal(),
                 })
                 .then(result=>{
-                    setventaId(result.id);})
+                    setventaId(result.id);
+                    Swal.fire(
+                        "Su compra fue un exito",`Su ticket ${result.id}`,"success"
+                    )})
                     clear()
+                    
                 .catch((error) =>{
-
-                    console.log(error)
+                    Swal.fire(
+                        "Ocurrio un error Inesperado",`${error.message}`,"error"
+                    )
         })
         }else{
             setError(true)
@@ -54,32 +52,37 @@ const BuyDate=()=>{
         })
     }
     return (
-
-        <>
-
-        {!ventaId 
-
-        ?<div id="buy">
-
-            <input type="text" placeholder="nombre" name="nombre" onChange={datosUser}/>
-
-            <input type="text" placeholder="email" name="email" onChange={datosUser}/>
-
-            <input type="number" placeholder="phone" name="phone" onChange={datosUser}/>
-
-            <button onClick={finalizarCompra}>Confirmar Compra</button>
+        <div id="datosCompra">
+            {loginUser?<div>
+            {!ventaId ?<div id="buy">
+                <h3>Dirección</h3>
+            <input type="text" placeholder="Dirección" name="dirección" onChange={datosUser}/>
+            <h3>Numero de Casa</h3>
+            <input type="text" placeholder="Numero de casa" name="Direccion-numero" onChange={datosUser}/>
+            <h3>Targeta de credito</h3>
+            <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX" name="Numero Targeta" onChange={datosUser}/>
+            <h3>PIN</h3>
+            <input type="number" placeholder="XXX" name="codigo" onChange={datosUser}/>
+            <h3>Fecha de vencimiento </h3>
+            <input type="date"  name="Fecha Vencimiento" onChange={datosUser}/>
+            
+            <button id="confirmarCompra" onClick={finalizarCompra}>Confirmar Compra</button>
 
             {error && <p style={{color:'red'}}>Todos los campos son requeridos</p>}
-
-        </div>
-        :<div>
-            <h3>Muchas gracias por tu compra!</h3>
-            <h5>Tu orden : {ventaId}</h5>
-            <button onClick={()=>navigate('/')}>Volver</button>
-        </div>
+            </div>
+            :   
+            <div id="ticket">
+                <h3>¡Muchas gracias por tu compra!</h3>
+                <h3>Tu orden : {ventaId}</h3>
+                <button id="confirmarCompra" onClick={()=>navigate('/')}>Volver</button>
+            </div>
         }
-        </>
+        </div>:<p>Por favor <Link to="/login">inicie seccion</Link> para continuar,</p>}
+        </div>
+        
     )
 }
 
 export default BuyDate
+            
+        

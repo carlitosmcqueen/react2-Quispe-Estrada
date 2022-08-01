@@ -1,5 +1,6 @@
 import Header from './componentes/header/header';
 import Nav from './componentes/nav/nav';
+import Footer from './componentes/footer/footer';
 import ItemList from "./componentes/itemlist/itemListContainer";
 import ItemDetail from "./componentes/itemDetails/itemDatailContainer";
 import CustomProvider from "./componentes/Context/CartContext";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Compra" element={<BuyDate/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
       </Routes>
+      <Footer></Footer>
       </CustomProvider>
     
     </BrowserRouter>

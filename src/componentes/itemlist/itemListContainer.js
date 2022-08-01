@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import ItemList from "./itemList";
 import {db} from '../../firebase/firebase';
 import { getDocs,collection, query,where} from 'firebase/firestore';
+import "./item.css";
 
 
 
@@ -38,29 +39,17 @@ const ListaMercado=({greeting})=>{
     
     
     return(  
-        <>
-        <h3 style={styles.posicion}>{greeting}</h3>
-
-        <div style={styles.cards}>
+        <div id="listaProductos">
+        <h3 id="posicion">{greeting}</h3>
+        <div id="card">
         {carga ? <p>cargando...</p> :<ItemList listaProductos={listaProductos}></ItemList>}
         </div>
 
-    </>
+        </div>
     )
 
 
 }
 export default ListaMercado
 
-const styles ={
-    posicion:{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    cards: {
-        display: 'flex',
-        flexDirection: 'column',
-    }
-}
 

@@ -1,10 +1,13 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import "./header.css";
 import { Link } from "react-router-dom";
+import {contexto} from "../Context/CartContext";
 
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-function Header(props) {
+function Header() {
+    const {usuarioLogeado,loginUser} =useContext(contexto)
+
+
+
     return (
         <header className="barra">
             <div className="imgtit">
@@ -13,11 +16,7 @@ function Header(props) {
             </div>
             
             <div className="icon">
-                {/* <div className="iconos">
-                    <FacebookIcon/>
-                    <TwitterIcon/>
-                </div> */}
-                <Link to="/login"><h2>IniciarSeccion/Crear Usuario</h2></Link>
+                {loginUser?<Link to="/login"><h2>Bienvenido: {usuarioLogeado}</h2></Link>:<Link to="/login"><h2>IniciarSeccion/Crear Usuario</h2></Link>}
             </div>
         </header>
     );

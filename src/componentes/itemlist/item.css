@@ -6,7 +6,8 @@
     padding:1vw;
     border-radius:5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.808);
-    margin: 1vh;
+    margin: 2vh;
+    width: 95vw;
     
 }
 .cajaTexto{
@@ -34,3 +35,22 @@
     border:1px solid black;
     border-radius: 10px;
 }
+#listaProductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#posicion{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+

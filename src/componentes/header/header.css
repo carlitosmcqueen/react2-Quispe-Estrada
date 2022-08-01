@@ -20,8 +20,8 @@
 .icon{
     display: flex;
     height:20vh;
+    padding: 1vw;
     align-items: flex-end;
-    
     
 }
 .iconos {

@@ -3,6 +3,8 @@ export const contexto=createContext();
 const {Provider} = contexto;
 const CustomProvider =({children})=>{
     const [productos,setProductos]=useState([]);
+    const [usuarioLogeado,setUsuarioLogeado]=useState([]);
+    const [loginUser,setLoginUser]=useState(false);
 
     /*
     Profe hhasta aca pude llegar sin problemas 
@@ -15,9 +17,14 @@ const CustomProvider =({children})=>{
     */
     // const [productos,setProductos]=useState(JSON.parse(localStorage.getItem("lol")));
     
-
-
     const [qtyProducts,setQtyProducts]=useState(0);
+
+    const logeado=(user)=>{
+        setUsuarioLogeado(user)
+    }
+    const mostrarLogin=(mostrar)=>{
+        setLoginUser(mostrar)
+    }
 
     const getQtyProducts=()=>{
         // if((productos===null)){
@@ -66,7 +73,7 @@ const CustomProvider =({children})=>{
         );
     };
     return (
-        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts,isInCart,calcularTotal}}>
+        <Provider value={{productos,addProduct,deleteProduct,clear,qtyProducts,isInCart,calcularTotal,logeado,usuarioLogeado,mostrarLogin,loginUser}}>
             {children}
         </Provider>
     )

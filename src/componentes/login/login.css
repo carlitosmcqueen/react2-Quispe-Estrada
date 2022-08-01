@@ -14,14 +14,14 @@
     border-radius:20px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.808);
     margin: 1vh;
+    height:55vh;
     width: 70vw;
-
-    
 }
 
 .inicioSeccionInput{
     display:flex;
     flex-direction:column;
+    align-items: center;
     width:30vw;
     
     
@@ -29,15 +29,23 @@
 .inicioSeccionUsuario{
     display:flex;
     flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    width: 35vw;
+    justify-content:center;
+}
+.inputLogin{
+    height:3vh;
+    width: 25vw;
+    margin:1vh;
+    font-size:18px;
 }
 .boton{
-    background-color:rgb(241, 132, 132);
+    background-color:rgb(253, 255, 118);
     font-size: 14px;
-    height:3vh;
-    font-weight:bold;
-
-    
+    height:4vh;
+    font-weight:bold;   
+}
+.botonLogout{
+    background-color:rgb(255, 75, 75);
+    font-size: 14px;
+    height:4vh;
+    font-weight:bold;   
 }

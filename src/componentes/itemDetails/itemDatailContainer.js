@@ -13,7 +13,6 @@ const GetItem =()=>{
         const productosCollection =collection(db,"productos")
         const refDoc = doc(productosCollection,id);
 
-        
         getDoc(refDoc).then(result=>{
 
             setDetalles({

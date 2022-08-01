@@ -1,7 +1,7 @@
 #carta{
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    align-items:center;
 }
 
 #ListaCompra{
@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content:space-between;
     align-items:center;
+    width:95vw;
     background-color: rgb(214, 248, 250);
     padding:1vw;
     border-radius:5px;
@@ -38,6 +39,7 @@
     justify-content:space-between;
     margin:1vh;
     padding:1vw;
+    width:95vw;
     border-radius:10px;
 }
 #botones{
