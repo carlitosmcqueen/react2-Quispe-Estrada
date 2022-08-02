@@ -61,8 +61,7 @@ const BuyDate=()=>{
             <h3>PIN</h3>
             <input type="number" placeholder="XXX" name="codigo" onChange={datosUser}/>
             <h3>Fecha de vencimiento </h3>
-            <input type="date"  name="Fecha Vencimiento" onChange={datosUser}/>
-            
+            <input type="date" name="Fecha Vencimiento" onChange={datosUser}/>
             <button id="confirmarCompra" onClick={finalizarCompra}>Confirmar Compra</button>
 
             {error && <p style={{color:'red'}}>Todos los campos son requeridos</p>}
@@ -74,7 +73,7 @@ const BuyDate=()=>{
                 <button id="confirmarCompra" onClick={()=>navigate('/')}>Volver</button>
             </div>
         }
-        </div>:<p>Por favor <Link to="/login">inicie seccion</Link> para continuar,</p>}
+        </div>:<div id="inicieSeccion"><p>Por favor <Link to="/login">inicie seccion</Link> para continuar,</p></div>}
         </div>
         
     )

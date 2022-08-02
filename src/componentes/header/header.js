@@ -12,7 +12,7 @@ function Header() {
                 <h1 className="titulo">Mercado <br/>Coder</h1>
             </div>
             <div className="icon">
-                {loginUser?<Link to="/login"><h2>Bienvenido: {usuarioLogeado}</h2></Link>:<Link to="/login"><h2>IniciarSeccion/Crear Usuario</h2></Link>}
+                {loginUser?<Link to="/login"><h3>Bienvenido: {usuarioLogeado}</h3></Link>:<Link to="/login"><h3>IniciarSeccion/Crear Usuario</h3></Link>}
             </div>
         </header>
     );

@@ -1,6 +1,6 @@
-# titulo H1
-## titulo H2
-### en h3
+# MERCADO CODER
+## Primera Pagina con React JS
+### Pasos a seguir 
 los parrafos en html se hacen con p
 
 * punto 1
