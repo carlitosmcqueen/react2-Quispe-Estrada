@@ -1,11 +1,8 @@
-import React,{useState,useContext} from 'react';
+import React,{useState} from 'react';
 import "./itemCount.css";
-
-import {contexto} from "../Context/CartContext";
 
 const Count =({producto,stock,initial,onAdd})=>{
 
-    const {productos}=useContext(contexto)
     const [contador,setContador]=useState(initial);
     const [cantidad,setStock]=useState(stock);
     const [productosM,setProductos]=useState(producto);
@@ -29,7 +26,7 @@ const Count =({producto,stock,initial,onAdd})=>{
     }
     const comprar = (e)=>{
         onAdd(contador)
-        localStorage.setItem("lol",JSON.stringify(productos));
+        
     }
     return(
         <div id="ventas">

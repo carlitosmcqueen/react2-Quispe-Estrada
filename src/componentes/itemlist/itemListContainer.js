@@ -5,15 +5,11 @@ import {db} from '../../firebase/firebase';
 import { getDocs,collection, query,where} from 'firebase/firestore';
 import "./item.css";
 
-
-
 const ListaMercado=({greeting})=>{
     const [listaProductos,setlistaProductos]=useState([]);
     const [carga,setCarga]=useState(true);
 
     const {categoryId}=useParams();
-   
-
 
     useEffect(()=>{
 
@@ -37,18 +33,14 @@ const ListaMercado=({greeting})=>{
 
     },[categoryId])
     
-    
     return(  
         <div id="listaProductos">
-        <h3 id="posicion">{greeting}</h3>
-        <div id="card">
-        {carga ? <div id="cargando"><p>CARGANDO</p></div> :<ItemList listaProductos={listaProductos}></ItemList>}
-        </div>
-
+            <h3 id="posicion">{greeting}</h3>
+            <div id="card">
+                {carga ? <div id="cargando"><p>CARGANDO</p></div> :<ItemList listaProductos={listaProductos}></ItemList>}
+            </div>
         </div>
     )
-
-
 }
 export default ListaMercado
 

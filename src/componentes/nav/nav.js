@@ -22,7 +22,6 @@ function Nav(){
             <div id="linkCartWidget">
                 <Link  to="/cart"><CartWidget /></Link>
             </div>
-           
 
         </div>
     );

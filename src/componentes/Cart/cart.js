@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import "./cart.css"
 const Carta=()=>{
     const {productos,deleteProduct,clear,calcularTotal}=useContext(contexto);
-
-    //aca probando cosas 
     if((productos.length===0)){
         return (
         <div id="vacio">

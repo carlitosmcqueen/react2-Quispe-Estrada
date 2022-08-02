@@ -6,7 +6,6 @@ import "./buydate.css"
 import {  Link, useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2"
 
-
 const BuyDate=()=>{
 
     const {productos,calcularTotal,clear,loginUser,usuarioLogeado}=useContext(contexto);
@@ -15,8 +14,6 @@ const BuyDate=()=>{
     const [error,setError] = useState(false)
     const navigate = useNavigate()
     const finalizarCompra=()=>{
-        //aca borro "lol" y se convierte en null
-        localStorage.removeItem("lol");
         if(Object.values(buyer).length === 5){
             setError(false)
             const ventasUsuario = collection(db,"ventas");
