@@ -36,9 +36,9 @@ const Count =({producto,stock,initial,onAdd})=>{
             </div>
             <div id="cuentas">
                 <p>COMPRAR : {contador}</p>
-                <button className="botoncito" onClick={suma}><img className="botoncitoImg" src="https://i.pinimg.com/originals/38/7c/e6/387ce6da9e9f03ff6cd8abc680e974be.png" alt="suma"></img></button>
-                <button className="botoncito" onClick={resta}><img className="botoncitoImg" src="https://cdn-icons-png.flaticon.com/512/51/51363.png" alt="resta"></img></button>
-                <button className="botoncito" onClick={comprar}><img className="botoncitoImg" src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="comprar"></img></button>
+                <button className="botoncito" onClick={suma}><img className="botoncitoImg" src="https://i.postimg.cc/0ybHkhM5/mas.png" alt="suma"></img></button>
+                <button className="botoncito" onClick={resta}><img className="botoncitoImg" src="https://i.postimg.cc/BnTPKn1m/menos.png" alt="resta"></img></button>
+                <button className="botoncito" onClick={comprar}><img className="botoncitoImg" src="https://i.postimg.cc/Prm1m4gb/carrito.png" alt="comprar"></img></button>
 
             </div>
         </div>

@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding:20px;
 }
 .imagen {
@@ -24,31 +25,4 @@
     align-items: flex-end;
     
 }
-.iconos {
-    display: flex;
-    align-Items: center;
-    padding:20px;
-    
-}
 
-@media (max-width: 768px) {
-    .barra {
-        display: flex;
-        justify-content: center;
-        height: 20vh;
-    }
-    .imgtit{
-        justify-content: center;
-    }
-    .icon{
-        display: none;
-    }
-    .imagen {
-        width: 20%;
-    }
-
-    .titulo {
-        display: none;
-    }
-
-}

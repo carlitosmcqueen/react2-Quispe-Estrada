@@ -8,11 +8,10 @@ function Header() {
     return (
         <header className="barra">
             <div className="imgtit">
-                <img className="imagen" src="https://png.pngtree.com/png-vector/20201221/ourlarge/pngtree-clothing-store-logo-png-image_2586576.jpg" alt="logo"></img>
-                <h1 className="titulo">Mercado <br/>Coder</h1>
+                <img className="imagen" src="https://i.postimg.cc/zXBVfkJX/tienda.png" alt="logo"></img>
             </div>
             <div className="icon">
-                {loginUser?<Link to="/login"><h3>Bienvenido: {usuarioLogeado}</h3></Link>:<Link to="/login"><h3>IniciarSeccion/Crear Usuario</h3></Link>}
+                {loginUser?<Link to="/login"><h3>Bienvenido: {usuarioLogeado}</h3></Link>:<Link to="/login"><h3>Iniciar Seccion/Crear Usuario</h3></Link>}
             </div>
         </header>
     );

@@ -7,7 +7,7 @@ const CartWidget =()=>{
     return(
         
         <div id="cajaCart">
-            <img id="imagenCart" src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="carticon" />
+            <img id="imagenCart" src="https://i.postimg.cc/Prm1m4gb/carrito.png" alt="carticon" />
             <h3>{qtyProducts > 0 &&  qtyProducts}</h3>
         </div>
     )
